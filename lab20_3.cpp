@@ -89,10 +89,7 @@ int main(){
 			}else{
 			
 			    //Append (push_back) textline to lecture_list[] of the recently added course in allcourses[];
-				course a;
-				if(allcourses[0].lecture_list.size() < 4) allcourses[0].lecture_list.push_back(textline);
-				else if(allcourses[1].lecture_list.size() < 1) allcourses[1].lecture_list.push_back(textline);
-				else allcourses[2].lecture_list.push_back(textline);
+				allcourses[allcourses.size() - 1].lecture_list.push_back(textline);
 
 			}			
 		}else{
@@ -102,10 +99,7 @@ int main(){
 				student *p = findstudent(allstudents,atof(textline.c_str()));
 				
 				//Append (push_back) p to student_list of the recently added course in allcourses[];
-				course a;
-				if(allcourses[0].student_list.size() < 10) allcourses[0].student_list.push_back(p);
-				else if(allcourses[1].student_list.size() < 9) allcourses[1].student_list.push_back(p);
-				else allcourses[2].student_list.push_back(p);
+				allcourses[allcourses.size() - 1].student_list.push_back(p);
 			}
 		}
 	}
